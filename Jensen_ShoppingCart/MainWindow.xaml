@@ -1,0 +1,65 @@
+﻿<Window x:Class="Jensen_ShoppingCart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jensen_ShoppingCart"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="938">
+    <ScrollViewer>
+        <Grid>
+
+            <Rectangle Fill="#FFCFCFEC" HorizontalAlignment="Left" Height="215" Margin="662,671,0,0" Stroke="Black" VerticalAlignment="Top" Width="215"/>
+
+            <ListBox x:Name="InvoiceListBox" HorizontalAlignment="Left" Height="165" Margin="55,100,0,0" VerticalAlignment="Top" Width="830" SelectionChanged="InvoiceListBox_SelectionChanged" FontFamily="Consolas">
+
+            </ListBox>
+            <ListBox x:Name="InvoiceItemsListBox" HorizontalAlignment="Left" Height="120" Margin="59,532,0,0" VerticalAlignment="Top" Width="820" SelectionChanged="InvoiceItemsListBox_SelectionChanged" FontFamily="Consolas"/>
+            <Label x:Name="InvoicesLabel" Content="Invoices" HorizontalAlignment="Left" Margin="55,46,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="InvoiceRecordLabel" Content="Invoice Record" HorizontalAlignment="Left" Height="35" Margin="55,265,0,0" VerticalAlignment="Top" Width="150" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="InvoiceItemsLabel" Content="Invoice Items" HorizontalAlignment="Left" Margin="59,478,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+            <Label x:Name="InvoiceItemsRecordLabel" Content="Invoice Items Record" HorizontalAlignment="Left" Margin="59,671,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+            <Label Content="Invoice ID:" HorizontalAlignment="Left" Margin="88,308,0,0" VerticalAlignment="Top"/>
+            <Label Content="Customer Name:" HorizontalAlignment="Left" Margin="59,345,0,0" VerticalAlignment="Top"/>
+            <Label Content="Customer Address:" HorizontalAlignment="Left" Margin="390,340,0,0" VerticalAlignment="Top"/>
+            <Label Content="Invoice Date:" HorizontalAlignment="Left" Margin="278,308,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="IsShippedCheckBox" Content="Shipped?" HorizontalAlignment="Left" Margin="505,314,0,0" VerticalAlignment="Top"/>
+            <Label Content="Customer Email:" HorizontalAlignment="Left" Margin="59,385,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="InvoiceIDTextBox" HorizontalAlignment="Left" Height="23" Margin="158,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" Background="#FFDCDADA"/>
+            <TextBox x:Name="InvoiceDateTextBox" HorizontalAlignment="Left" Height="23" Margin="356,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+            <TextBox x:Name="CustomerNameTextBox" HorizontalAlignment="Left" Height="23" Margin="158,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"/>
+            <TextBox x:Name="CustomerAddressTextBox" HorizontalAlignment="Left" Height="80" Margin="505,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
+            <TextBox x:Name="CustomerEmailTextBox" HorizontalAlignment="Left" Height="23" Margin="159,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+            <Button x:Name="InvoiceSaveButton" Content="Save" HorizontalAlignment="Left" Margin="722,316,0,0" VerticalAlignment="Top" Width="75" Click="InvoiceSaveButton_Click"/>
+            <Button x:Name="InvoiceDeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="722,344,0,0" VerticalAlignment="Top" Width="75" Click="InvoiceDeleteButton_Click"/>
+            <Button x:Name="InvoiceNewButton" Content="New" HorizontalAlignment="Left" Margin="722,373,0,0" VerticalAlignment="Top" Width="75" Click="InvoiceNewButton_Click"/>
+            <Label Content="Item ID:" HorizontalAlignment="Left" Margin="72,726,0,0" VerticalAlignment="Top"/>
+            <Label Content="Item Name:" HorizontalAlignment="Left" Margin="211,724,0,0" VerticalAlignment="Top"/>
+            <Label Content="Item Description:" HorizontalAlignment="Left" Margin="72,757,0,0" VerticalAlignment="Top"/>
+            <Label Content="Item Price:" HorizontalAlignment="Left" Margin="73,789,0,0" VerticalAlignment="Top"/>
+            <Label Content="Item Quantity:" HorizontalAlignment="Left" Margin="235,789,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="ItemIDTextBox" HorizontalAlignment="Left" Height="23" Margin="132,726,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" IsReadOnly="True" Background="#FFDCDADA"/>
+            <TextBox x:Name="ItemNameTextBox" HorizontalAlignment="Left" Height="23" Margin="291,726,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+            <TextBox x:Name="ItemDescriptionTextBox" HorizontalAlignment="Left" Height="23" Margin="177,758,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290"/>
+            <TextBox x:Name="ItemPriceTextBox" HorizontalAlignment="Left" Height="24" Margin="144,790,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"/>
+            <TextBox x:Name="ItemQuantityTextBox" HorizontalAlignment="Left" Height="24" Margin="325,790,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
+            <Label x:Name="InvoiceErrorLabel" Content="Invoice Error Label" HorizontalAlignment="Left" Margin="59,425,0,0" VerticalAlignment="Top" Width="641" FontWeight="Bold" Foreground="#FFF70F0F" HorizontalContentAlignment="Center" Height="45"/>
+            <Label x:Name="ItemErrorLabel" Content="Item Error Label" HorizontalAlignment="Left" Margin="72,843,0,0" VerticalAlignment="Top" Width="550" FontWeight="Bold" Foreground="#FFF70F0F" HorizontalContentAlignment="Center" Height="54"/>
+            <Button x:Name="ItemSaveButton" Content="Save" HorizontalAlignment="Left" Margin="509,722,0,0" VerticalAlignment="Top" Width="75" Click="ItemSaveButton_Click"/>
+            <Button x:Name="ItemDeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="509,749,0,0" VerticalAlignment="Top" Width="75" Click="ItemDeleteButton_Click"/>
+            <Button x:Name="ItemNewButton" Content="New" HorizontalAlignment="Left" Margin="509,776,0,0" VerticalAlignment="Top" Width="75" Click="ItemNewButton_Click"/>
+            <Label Content="Order Cost:" HorizontalAlignment="Left" Margin="689,685,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+            <Label Content="Subtotal:" HorizontalAlignment="Left" Margin="692,741,0,0" VerticalAlignment="Top"/>
+            <Label Content="PST (6%):" HorizontalAlignment="Left" Margin="692,773,0,0" VerticalAlignment="Top"/>
+            <Label Content="GST (5%):" HorizontalAlignment="Left" Margin="692,805,0,0" VerticalAlignment="Top"/>
+            <Label Content="Total:" HorizontalAlignment="Left" Margin="692,835,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox x:Name="SubtotalTextBox" HorizontalAlignment="Left" Height="23" Margin="783,743,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" IsReadOnly="True" Background="#FFDCDADA"/>
+            <TextBox x:Name="PSTTextBox" HorizontalAlignment="Left" Height="23" Margin="783,775,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" IsReadOnly="True" Background="#FFDCDADA"/>
+            <TextBox x:Name="GSTTextBox" HorizontalAlignment="Left" Height="23" Margin="783,806,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" IsReadOnly="True" Background="#FFDCDADA"/>
+            <TextBox x:Name="OrderTotalTextBox" HorizontalAlignment="Left" Height="23" Margin="783,837,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" IsReadOnly="True" Background="#FFDCDADA"/>
+            <Label x:Name="InvoicesHeaderLabel" Content="Invoices Header Label" HorizontalAlignment="Left" Margin="55,79,0,0" VerticalAlignment="Top" Width="830" FontFamily="Consolas" FontWeight="Bold"/>
+            <Label x:Name="ItemsHeaderLabel" Content="Items Header Label" HorizontalAlignment="Left" Margin="62,512,0,0" VerticalAlignment="Top" Width="830" FontFamily="Consolas" FontWeight="Bold"/>
+
+        </Grid>
+    </ScrollViewer>
+</Window>

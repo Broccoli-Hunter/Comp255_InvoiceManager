@@ -1,0 +1,35 @@
+﻿These are the Insert statements I used to initially add data to my database tables:
+
+Reference for order of columns in tables:
+Invoices
+(InvoiceID, InvoiceDate, Shipped, CustomerName, CustomerAddress, CustomerEmail)
+
+InvoiceItems
+(ItemID, InvoiceID, ItemName, ItemDescription, ItemPrice, ItemQuantity)
+
+
+***************
+Query:
+***************
+INSERT INTO Invoices
+VALUES (1000, '2020-11-12', 1, 'Terry Reid', 'PO Box 123, Belle Plaine, SK  S0G 0G0', 'tj57@hotmail.com');
+INSERT INTO Invoices
+VALUES (1001, '2020-11-15', 1, 'Rayden Philipson', '5786 Dewdney Ave., Regina, SK  S4P 2X4', 'r_philipson@live.com');
+INSERT INTO Invoices
+VALUES (1002, '2020-12-02', 0, 'Vincent Langevin', '365 4th Ave. N.E., Moose Jaw, SK  S6H 1K3', 'vincent@langevin.ca');
+INSERT INTO InvoiceItems
+VALUES (100, 1000, 'Cat-Away', 'Cat repellant spray', 19.99, 1);
+INSERT INTO InvoiceItems
+VALUES (101, 1000, 'Marrow Bones', 'Bacon flavoured treats', 9.49, 2);
+INSERT INTO InvoiceItems
+VALUES (102, 1000, 'LG Collar', 'Size large dog collar', 11.99, 1);
+INSERT INTO InvoiceItems
+VALUES (103, 1001, 'Catnip Toys', '6-pack catnip mice', 5.99, 2);
+INSERT INTO InvoiceItems
+VALUES (104, 1001, 'Friskas 10lb', '10lb bag chicken flavor', 12.99, 1);
+INSERT INTO InvoiceItems
+VALUES (105, 1002, 'Small bed', 'Small fleece pet bed', 17.99, 1);
+INSERT INTO InvoiceItems
+VALUES (106, 1002, 'Gravity feeder', '1L capacity gravity feeder', 23.99, 1);
+INSERT INTO InvoiceItems
+VALUES (107, 1002, 'Hairball Remedy', 'Hairball lick stick', 8.99, 1);

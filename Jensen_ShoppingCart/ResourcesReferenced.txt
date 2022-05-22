@@ -1,0 +1,15 @@
+﻿In Invoice Items table design:
+	https://www.w3schools.com/sql/sql_foreignkey.asp
+	To help with syntax of adding InvoiceID as a foreign key on the InvoiceItems table
+In IsDataValid() function:
+	https://docs.microsoft.com/en-us/dotnet/api/system.windows.input.keyboard.focus?view=net-5.0
+	To show syntax for setting the keyboard focus to place where error is occuring
+In CalcualteCost() function:
+	https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in
+	To remind myself how to use a foreach loop
+In MainWindow design:
+	https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls.scrollviewer?view=net-5.0
+	To make scrollviewer happen because my form at 100% was larger than my laptop screen
+
+
+
