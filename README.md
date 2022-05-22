@@ -3,7 +3,7 @@ WPF invoice manager with invoice list, customer details, invoice items, and item
 
 Final Project for Comp 255 / Visual Application Development
 * December 2020
-* Grade = 
+* Grade = 99%
 
 ### Objective
 * Create a WPF app that pulls information from an in-memory database to show a list of invoices, customer record details, list of invoice items, and item details
